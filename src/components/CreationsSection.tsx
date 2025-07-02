@@ -4,32 +4,32 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    name: 'AutoCode',
-    description: 'Your Personal Junior Developer',
-    subtitle: 'Text-to-Chrome Extension',
-    color: 'from-green-500 to-emerald-600',
-    icon: '</>'
-  },
-  {
-    name: '100xEngineers YouTube',
-    description: 'Educating you with AI Content',
-    subtitle: 'AI-powered educational content',
+    name: 'AI Ad Generator',
+    description: 'Generate high-converting ads in seconds',
+    subtitle: 'Automated creative generation',
     color: 'from-blue-500 to-blue-600',
-    icon: '▶'
+    icon: '📱'
   },
   {
-    name: 'OverPowered AI',
-    description: 'All about AI ft. Varun Mayya & Tanmay Bhat',
-    subtitle: 'AI discussion platform',
+    name: 'Voice Clone Marketing',
+    description: 'Personalized voice messages at scale',
+    subtitle: 'AI voice synthesis for campaigns',
     color: 'from-purple-500 to-purple-600',
-    icon: '🔥'
+    icon: '🎵'
   },
   {
-    name: 'AlphaCode',
-    description: 'Your AI Coding Assistant',
-    subtitle: 'Advanced development tools',
+    name: 'Smart Email Campaigns',
+    description: 'AI-powered email sequences that convert',
+    subtitle: 'Intelligent email automation',
+    color: 'from-green-500 to-emerald-600',
+    icon: '📧'
+  },
+  {
+    name: 'Video UGC Generator',
+    description: 'Create authentic user-generated content',
+    subtitle: 'AI video creation platform',
     color: 'from-orange-500 to-red-600',
-    icon: '⚡'
+    icon: '🎬'
   }
 ];
 
@@ -45,10 +45,10 @@ export default function CreationsSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            Creations from our <span className="text-[#FF5A1F]">AI Lab</span>
+            What will you <span className="text-[#FF5A1F]">create?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
-            We're always builders first!
+            Build real AI-powered marketing campaigns that drive actual results and revenue.
           </p>
         </motion.div>
 

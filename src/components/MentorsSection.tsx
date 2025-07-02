@@ -4,27 +4,27 @@ import { motion } from 'framer-motion';
 
 const mentors = [
   {
-    name: 'Sridev Ramesh',
-    title: 'Ex-Teaching Fellow, CS50 @ Harvard',
-    description: 'Ex-Teaching Fellow, CS50 @ Harvard',
+    name: 'Sarah Chen',
+    title: 'Ex-Meta Marketing AI Lead',
+    description: 'Led AI marketing initiatives at Meta, scaled campaigns to $100M+ spend',
     color: 'from-blue-500 to-blue-700'
   },
   {
-    name: 'Tejas Tholpadi',
-    title: 'Co-Founder & Ex-CTO Avaton, Built God in a Box',
-    description: 'Co-Founder & Ex-CTO Avaton, Built God in a Box',
+    name: 'Marcus Rodriguez',
+    title: 'Mesha Co-founder',
+    description: 'Built AI marketing platform used by 500+ agencies worldwide',
     color: 'from-purple-500 to-purple-700'
   },
   {
-    name: 'Koushik Valluri',
-    title: 'AI Researchers at AEOS Labs, Built AlphaCTR, AI projects with Amazon, Sunfeast, M.S Dhoni',
-    description: 'AI Researchers at AEOS Labs, Built AlphaCTR, AI projects with Amazon, Sunfeast, M.S Dhoni',
+    name: 'Priya Sharma',
+    title: 'DTC Brand Growth Expert',
+    description: 'Scaled 15+ DTC brands from 0 to 8-figures using AI marketing',
     color: 'from-green-500 to-green-700'
   },
   {
-    name: 'Siddhant Goswami',
-    title: 'Built & scaled 3 products to $10M+ Trained 1000+ students in GenAI and LLMs 2 exits to Unacademy',
-    description: 'Built & scaled 3 products to $10M+ Trained 1000+ students in GenAI and LLMs 2 exits to Unacademy',
+    name: 'Alex Thompson',
+    title: 'Creative AI Specialist',
+    description: 'Generated $50M+ in revenue through AI-powered creative campaigns',
     color: 'from-orange-500 to-orange-700'
   }
 ];
@@ -44,10 +44,10 @@ export default function MentorsSection() {
             Who's Teaching
           </span>
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            Join the New Era of <span className="text-[#FF5A1F]">GenAI Engineers</span>
+            Learn from <span className="text-[#FF5A1F]">Marketing AI Experts</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
-            Learn from the elite. Break the mold!
+            Get mentored by leaders who've built and scaled AI marketing systems
           </p>
         </motion.div>
 

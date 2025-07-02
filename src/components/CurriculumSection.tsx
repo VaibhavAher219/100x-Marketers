@@ -4,98 +4,77 @@ import { motion } from 'framer-motion';
 
 const modules = [
   { 
-    week: 0, 
-    title: 'Essential Prerequisites', 
-    subtitle: 'FREE PREVIEW',
-    sessions: 2, 
-    assignments: 0,
+    week: 1, 
+    title: 'Foundations of Generative AI in Marketing', 
+    subtitle: 'WHAT IS GENERATIVE AI?',
+    sessions: 1, 
+    assignments: 1,
     lessons: [
-      'Intro to Generative AI',
-      'Master Midjourney'
+      'What is Generative AI?',
+      'Key Concepts: LLMs, Transformers, Diffusion Models',
+      'Marketing Shifts Enabled by AI',
+      'Marketing Use Cases: Copy, Images, Video, Strategy',
+      'The New Marketing Stack: AI Strategist, Prompt Engineer',
+      'Tools Landscape Overview: ChatGPT, Jasper, Midjourney, Synthesia',
+      'Prompt Engineering Basics for Marketers'
     ],
     color: 'bg-blue-500',
-    icon: '⛵'
-  },
-  { 
-    week: 1, 
-    title: 'Dive Straight in the Deep End', 
-    subtitle: 'DIVE STRAIGHT IN THE DEEP END',
-    sessions: 3, 
-    assignments: 1,
-    lessons: [],
-    color: 'bg-purple-500',
-    icon: '🚀'
+    icon: '🤖'
   },
   { 
     week: 2, 
-    title: 'Intro to Stable Diffusion', 
-    subtitle: 'PROMPTS, PARAMETERS, SCRIPTS & MORE',
+    title: 'Creative Automation & Content Generation', 
+    subtitle: 'AI-POWERED CONTENT TYPES',
     sessions: 1, 
     assignments: 1,
-    lessons: [],
-    color: 'bg-blue-600',
+    lessons: [
+      'Creative Bottlenecks in Traditional Marketing',
+      'AI-Powered Content Types: Image, Video, Copy, Voice',
+      'UGC Generation & Use Cases',
+      'Best Tools: Runway, Pika, ElevenLabs, HeyGen, AdCreative.ai',
+      'Case Studies: DTC Brands Using AI Creatives',
+      'Creative Fatigue & Iteration Speed',
+      'Prompting for Visual + Video Generation'
+    ],
+    color: 'bg-purple-500',
     icon: '🎨'
   },
   { 
     week: 3, 
-    title: 'Advanced Stable Diffusion', 
-    subtitle: 'IMG2IMG, EXTENSION & INPAINTING',
-    sessions: 2, 
+    title: 'AI Agents in Marketing Workflows', 
+    subtitle: 'WHAT IS AN AI AGENT?',
+    sessions: 1, 
     assignments: 1,
-    lessons: [],
-    color: 'bg-blue-600',
-    icon: '🎭'
+    lessons: [
+      'What is an AI Agent? (vs. tools, vs. workflows)',
+      'Popular Frameworks: LangChain, AutoGPT, CrewAI',
+      'Agent Use Cases: Lead Nurturing, Ad Scaling, Follow-Up',
+      'Anatomy of a Marketing Agent (input, memory, tools, output)',
+      'Agent Playbooks (e.g., Post-Engagement Retargeting)',
+      'Example Workflow: UGC Ad Testing Loop',
+      'How Agents Learn: Feedback & Performance Loops'
+    ],
+    color: 'bg-green-500',
+    icon: '🤖'
   },
   { 
     week: 4, 
-    title: 'Intro to Finetuning', 
-    subtitle: 'DREAMBOOTH, CONTROLNET & IP ADAPTERS',
-    sessions: 2, 
-    assignments: 0,
-    lessons: [],
-    color: 'bg-pink-500',
-    icon: '🎯'
-  },
-  { 
-    week: 5, 
-    title: 'Advanced Finetuning', 
-    subtitle: 'LORA DATASETS, PARAMETERS, KOHYA SS',
-    sessions: 2, 
-    assignments: 0,
-    lessons: [],
-    color: 'bg-orange-500',
-    icon: '⚙️'
-  },
-  { 
-    week: 6, 
-    title: 'ComfyUI', 
-    subtitle: 'STABLE DIFFUSION GUI',
-    sessions: 2, 
-    assignments: 1,
-    lessons: [],
-    color: 'bg-green-500',
-    icon: '🔗'
-  },
-  { 
-    week: 7, 
-    title: 'Advanced ComfyUI', 
-    subtitle: 'WORKFLOWS',
-    sessions: 2, 
-    assignments: 0,
-    lessons: [],
-    color: 'bg-green-600',
-    icon: '⚡'
-  },
-  { 
-    week: 8, 
-    title: 'Mid-Cohort Capstone Project', 
-    subtitle: 'CHEERS, YOU MADE IT THIS FAR!',
+    title: 'Revenue, AEO, and Conversions with Mesha', 
+    subtitle: 'LAUNCH WITH MESHA',
     sessions: 1, 
-    assignments: 0,
-    lessons: [],
-    color: 'bg-gray-400',
-    icon: '🏆'
-  },
+    assignments: 1,
+    lessons: [
+      'What is Mesha? Overview of the Platform',
+      'Core Products: Ad Agent, Marcus (Billing), Max (Close)',
+      'Case Studies: SaaS, Agencies, DTC Brands',
+      'Mesha\'s Workflow: Brief to Campaign to Revenue',
+      'UGC Automation + Message-Matched Landing Pages',
+      'ROAS Optimization via AI',
+      'AEO (AI Engine Optimization): Getting Found on AI Tools'
+    ],
+    color: 'bg-orange-500',
+    icon: '💰'
+  }
 ];
 
 export default function CurriculumSection() {
@@ -116,10 +95,10 @@ export default function CurriculumSection() {
             What will you <span className="text-[#FF5A1F]">learn?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
-            The most beginner-friendly curriculum in Generative AI.
+            Gen AI x Marketing: 4-Week Intensive Course
           </p>
           <p className="text-lg text-gray-500 font-mono mt-2">
-            Zero to Pro in 6 months.
+            From Zero to Marketing AI Wizard in 4 weeks.
           </p>
         </motion.div>
 
@@ -144,7 +123,7 @@ export default function CurriculumSection() {
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <span className="text-xs">WEEK {module.week}</span>
+                    <span className="text-2xl">{module.icon}</span>
                   </motion.div>
                 </div>
                 
@@ -156,7 +135,7 @@ export default function CurriculumSection() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="text-xs text-gray-500 font-mono mb-1">
-                        MODULE {module.week}
+                        WEEK {module.week}
                       </div>
                       <div className="text-xs text-gray-400 font-mono mb-2">
                         {module.subtitle}
@@ -168,55 +147,44 @@ export default function CurriculumSection() {
                     
                     {/* Stats */}
                     <div className="flex items-center gap-4 text-sm">
-                      {module.sessions > 0 && (
-                        <span className="flex items-center gap-1 text-red-500">
-                          <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                          {module.sessions} LIVE SESSION{module.sessions > 1 ? 'S' : ''}
-                        </span>
-                      )}
-                      {module.lessons && module.lessons.length > 0 && (
-                        <span className="flex items-center gap-1 text-gray-600">
-                          <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
-                          {module.lessons.length} VIDEO LESSON{module.lessons.length > 1 ? 'S' : ''}
-                        </span>
-                      )}
-                      {module.assignments > 0 && (
-                        <span className="flex items-center gap-1 text-orange-500">
-                          <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                          {module.assignments} ASSIGNMENT{module.assignments > 1 ? 'S' : ''}
-                        </span>
-                      )}
+                      <span className="flex items-center gap-1 text-red-500">
+                        <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                        {module.sessions} LIVE SESSION
+                      </span>
+                      <span className="flex items-center gap-1 text-orange-500">
+                        <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                        {module.assignments} ASSIGNMENT
+                      </span>
                     </div>
                   </div>
                   
                   {/* Lessons */}
-                  {module.lessons && module.lessons.length > 0 && (
-                    <div className="space-y-2">
-                      {module.lessons.map((lesson, j) => (
-                        <div key={j} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                              <span className="text-blue-600 text-sm">📚</span>
-                            </div>
-                            <span className="font-mono text-sm">{lesson}</span>
-                          </div>
-                          <motion.button
-                            className="px-4 py-1 bg-[#FF5A1F] text-white text-xs rounded-full font-bold"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                          >
-                            Watch for free ▶
-                          </motion.button>
+                  <div className="space-y-2">
+                    {module.lessons.slice(0, 3).map((lesson, j) => (
+                      <div key={j} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
+                        <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                          <span className="text-blue-600 text-xs">📚</span>
                         </div>
-                      ))}
-                    </div>
-                  )}
+                        <span className="font-mono text-sm text-gray-700">{lesson}</span>
+                      </div>
+                    ))}
+                    
+                    {module.lessons.length > 3 && (
+                      <div className="text-center py-2">
+                        <span className="text-sm text-gray-500 font-mono">
+                          +{module.lessons.length - 3} more topics
+                        </span>
+                      </div>
+                    )}
+                  </div>
                   
-                  {/* Special content for Week 0 */}
-                  {module.week === 0 && (
-                    <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
-                      <p className="text-blue-700 text-sm font-mono">
-                        🎁 Free preview lessons to get you started
+                  {/* Capstone Project for Week 4 */}
+                  {module.week === 4 && (
+                    <div className="mt-4 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200">
+                      <h4 className="font-bold text-orange-800 mb-2">🏆 Capstone Project</h4>
+                      <p className="text-orange-700 text-sm font-mono">
+                        Deliver a working AI-powered marketing campaign with creative generation, 
+                        agent design, AEO optimization, and launch via Mesha.
                       </p>
                     </div>
                   )}
@@ -239,7 +207,7 @@ export default function CurriculumSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View More
+            View Full Curriculum
           </motion.button>
         </motion.div>
       </div>

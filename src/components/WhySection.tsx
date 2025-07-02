@@ -13,7 +13,7 @@ export default function WhySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Why <span className="text-[#FF5A1F]">100xEngineers?</span>
+          Why become a <span className="text-[#FF5A1F]">Gen-AI Marketing Wizard?</span>
         </motion.h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -84,9 +84,9 @@ export default function WhySection() {
               </motion.div>
             </div>
             
-            <h3 className="text-2xl font-bold mb-4 text-[#FF5A1F]">Elite Developer Community</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#FF5A1F]">Elite Marketing AI Community</h3>
             <p className="text-gray-700 leading-relaxed font-mono text-sm">
-              Join the community of 100x Engineers - the ones at the forefront of a new era in coding. Network, seek help, get mentorship and have a guide for life as you navigate this space.
+              Join the community of Marketing AI Wizards - the ones at the forefront of a new era in marketing. Network, seek help, get mentorship and have a guide for life as you navigate AI-powered marketing.
             </p>
           </motion.div>
 
@@ -121,9 +121,9 @@ export default function WhySection() {
               </motion.div>
             </div>
             
-            <h3 className="text-2xl font-bold mb-4 text-[#FF5A1F]">Learn from the Best Mentors</h3>
+            <h3 className="text-2xl font-bold mb-4 text-[#FF5A1F]">Learn from Marketing AI Experts</h3>
             <p className="text-gray-700 leading-relaxed font-mono text-sm">
-              Your mentors in this course are the ones who have been there, done that! With decades of collective experience & having built real-world AI products, they're the best of the best.
+              Your mentors in this course are the ones who have been there, done that! With decades of collective experience & having built real-world AI marketing systems that generated millions in revenue.
             </p>
           </motion.div>
         </div>
