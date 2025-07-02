@@ -41,13 +41,13 @@ export default function MentorsSection() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block px-4 py-2 rounded-full bg-gray-100 text-gray-500 text-sm font-mono tracking-wide mb-6">
-            Who's Teaching
+            Who&apos;s Teaching
           </span>
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             Learn from <span className="text-[#FF5A1F]">Marketing AI Experts</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
-            Get mentored by leaders who've built and scaled AI marketing systems
+            Get mentored by leaders who&apos;ve built and scaled AI marketing systems
           </p>
         </motion.div>
 
