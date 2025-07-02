@@ -88,7 +88,7 @@ export default function WhatsInsideSection() {
             Overview
           </span>
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            What's <span className="text-[#FF5A1F]">inside?</span>
+            What&apos;s <span className="text-[#FF5A1F]">inside?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
             Again - not another ChatGPT course. Just saying.

@@ -24,7 +24,7 @@ export default function Header() {
         className="w-full bg-[#FF5A1F] text-white py-3 px-4 text-center font-medium relative z-50"
       >
         <span className="text-sm md:text-base">
-          The 100xEngineers' <span className="font-bold">GEN AI BUILDATHON</span>
+                      The 100xEngineers&apos; <span className="font-bold">GEN AI BUILDATHON</span>
         </span>
         <motion.a
           href="#"

@@ -67,7 +67,7 @@ const modules = [
       'What is Mesha? Overview of the Platform',
       'Core Products: Ad Agent, Marcus (Billing), Max (Close)',
       'Case Studies: SaaS, Agencies, DTC Brands',
-      'Mesha\'s Workflow: Brief to Campaign to Revenue',
+      'Mesha&apos;s Workflow: Brief to Campaign to Revenue',
       'UGC Automation + Message-Matched Landing Pages',
       'ROAS Optimization via AI',
       'AEO (AI Engine Optimization): Getting Found on AI Tools'
