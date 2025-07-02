@@ -81,7 +81,7 @@ export default function TracksSection() {
             </motion.p>
             
             <motion.ul 
-              className="space-y-3"
+              className="space-y-3 list-none"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -154,7 +154,7 @@ export default function TracksSection() {
             </motion.p>
             
             <motion.ul 
-              className="space-y-3"
+              className="space-y-3 list-none"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
