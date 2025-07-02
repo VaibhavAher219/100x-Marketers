@@ -86,7 +86,7 @@ export default function WhatsInsideSection() {
           <span className="inline-block px-4 py-2 rounded-full bg-gray-100 text-gray-500 text-sm font-mono tracking-wide mb-6">
             Overview
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
             What&apos;s <span className="text-[#FF5A1F]">inside?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">

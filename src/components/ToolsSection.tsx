@@ -29,7 +29,7 @@ export default function ToolsSection() {
           <span className="inline-block px-4 py-2 rounded-full bg-gray-200 text-gray-600 text-sm font-mono tracking-wide mb-6">
             AI Marketing Tools
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
             What will you <span className="text-[#FF5A1F]">master?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">

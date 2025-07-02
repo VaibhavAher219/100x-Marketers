@@ -44,7 +44,7 @@ export default function CreationsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
             What will you <span className="text-[#FF5A1F]">create?</span>
           </h2>
           <p className="text-xl text-gray-600 font-mono">
