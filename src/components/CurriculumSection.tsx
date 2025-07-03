@@ -18,7 +18,10 @@ const modules = [
       'Tools Landscape Overview: ChatGPT, Jasper, Midjourney, Synthesia',
       'Prompt Engineering Basics for Marketers'
     ],
-    color: 'bg-blue-500',
+    color: 'from-blue-500 to-blue-600',
+    bgColor: 'bg-blue-50',
+    borderColor: 'border-blue-200',
+    textColor: 'text-blue-600',
     icon: '🤖'
   },
   { 
@@ -36,7 +39,10 @@ const modules = [
       'Creative Fatigue & Iteration Speed',
       'Prompting for Visual + Video Generation'
     ],
-    color: 'bg-purple-500',
+    color: 'from-purple-500 to-purple-600',
+    bgColor: 'bg-purple-50',
+    borderColor: 'border-purple-200',
+    textColor: 'text-purple-600',
     icon: '🎨'
   },
   { 
@@ -54,7 +60,10 @@ const modules = [
       'Example Workflow: UGC Ad Testing Loop',
       'How Agents Learn: Feedback & Performance Loops'
     ],
-    color: 'bg-green-500',
+    color: 'from-emerald-500 to-emerald-600',
+    bgColor: 'bg-emerald-50',
+    borderColor: 'border-emerald-200',
+    textColor: 'text-emerald-600',
     icon: '🤖'
   },
   { 
@@ -72,142 +81,250 @@ const modules = [
       'ROAS Optimization via AI',
       'AEO (AI Engine Optimization): Getting Found on AI Tools'
     ],
-    color: 'bg-orange-500',
+    color: 'from-[#FF6B35] to-orange-600',
+    bgColor: 'bg-orange-50',
+    borderColor: 'border-orange-200',
+    textColor: 'text-[#FF6B35]',
     icon: '💰'
   }
 ];
 
 export default function CurriculumSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 0.6
+      }
+    }
+  };
+
+  const moduleVariants = {
+    hidden: { opacity: 0, x: -60 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8
+      }
+    }
+  };
+
   return (
-    <section className="w-full py-20 bg-white">
-      <div className="max-w-5xl mx-auto px-8">
+    <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#F8F9FA] to-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        
+        {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-gray-100 text-gray-500 text-sm font-mono tracking-wide mb-6">
+          <motion.span 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E8E8E8] text-[#1A1A1A]/60 text-sm font-medium mb-6 shadow-sm"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <span className="w-2 h-2 bg-[#FF6B35] rounded-full animate-pulse"></span>
             CURRICULUM
-          </span>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
-            What will you <span className="text-[#FF5A1F]">learn?</span>
+          </motion.span>
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A0A0A] mb-6 leading-tight">
+            What will you{' '}
+            <span className="text-[#FF6B35] relative">
+              learn?
+              <motion.div
+                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF6B35]/60 rounded-full"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              />
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 font-mono">
-            Gen AI x Marketing: 4-Week Intensive Course
-          </p>
-          <p className="text-lg text-gray-500 font-mono mt-2">
-            From Zero to Marketing AI Wizard in 4 weeks.
-          </p>
+          
+          <div className="space-y-2">
+            <p className="text-lg sm:text-xl text-[#1A1A1A]/80 font-semibold">
+              Gen AI × Marketing: 4-Week Intensive Course
+            </p>
+            <p className="text-base sm:text-lg text-[#1A1A1A]/60">
+              From Zero to Marketing AI Wizard in 4 weeks
+            </p>
+          </div>
         </motion.div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+        {/* Curriculum Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Timeline line - Hidden on mobile, visible on desktop */}
+          <div className="hidden lg:block absolute left-12 top-16 bottom-0 w-0.5 bg-gradient-to-b from-[#FF6B35] via-[#FF6B35]/50 to-transparent"></div>
           
-          <div className="space-y-8">
+          <motion.div
+            className="space-y-8 sm:space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {modules.map((module, i) => (
               <motion.div
                 key={i}
-                className="relative flex items-start gap-6"
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
+                className="relative"
+                variants={moduleVariants}
               >
-                {/* Week indicator */}
-                <div className="flex flex-col items-center">
-                  <motion.div
-                    className={`flex-shrink-0 w-16 h-16 ${module.color} rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg z-10`}
-                    whileHover={{ scale: 1.1, rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <span className="text-2xl">{module.icon}</span>
-                  </motion.div>
-                </div>
-                
-                {/* Content */}
-                <motion.div 
-                  className="flex-1 bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
-                  whileHover={{ y: -2, scale: 1.01 }}
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="text-xs text-gray-500 font-mono mb-1">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+                  
+                  {/* Week Indicator */}
+                  <div className="flex lg:flex-col items-center lg:items-center gap-4 lg:gap-2 mb-4 lg:mb-0 lg:w-24 lg:flex-shrink-0">
+                    <motion.div
+                      className={`relative w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center shadow-lg z-10`}
+                      whileHover={{ 
+                        scale: 1.1, 
+                        rotate: [0, -10, 10, 0],
+                        boxShadow: "0 20px 40px -12px rgba(0, 0, 0, 0.25)"
+                      }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <span className="text-2xl lg:text-3xl">{module.icon}</span>
+                      <div className="absolute inset-0 bg-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </motion.div>
+                    
+                    <div className="lg:text-center">
+                      <div className="text-sm font-bold text-[#1A1A1A] lg:text-xs lg:text-[#1A1A1A]/60">
                         WEEK {module.week}
                       </div>
-                      <div className="text-xs text-gray-400 font-mono mb-2">
-                        {module.subtitle}
-                      </div>
-                      <h3 className="text-xl font-bold text-black mb-2">
-                        {module.title}
-                      </h3>
-                    </div>
-                    
-                    {/* Stats */}
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="flex items-center gap-1 text-red-500">
-                        <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                        {module.sessions} LIVE SESSION
-                      </span>
-                      <span className="flex items-center gap-1 text-orange-500">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                        {module.assignments} ASSIGNMENT
-                      </span>
                     </div>
                   </div>
                   
-                  {/* Lessons */}
-                  <div className="space-y-2">
-                    {module.lessons.slice(0, 3).map((lesson, j) => (
-                      <div key={j} className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg">
-                        <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-                          <span className="text-blue-600 text-xs">📚</span>
+                  {/* Content Card */}
+                  <motion.div 
+                    className="flex-1 bg-white rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] group"
+                    whileHover={{ y: -8 }}
+                  >
+                    {/* Header */}
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                      <div className="flex-1">
+                        <div className="text-xs text-[#1A1A1A]/50 font-medium uppercase tracking-wider mb-2">
+                          {module.subtitle}
                         </div>
-                        <span className="font-mono text-sm text-gray-700">{lesson}</span>
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#0A0A0A] leading-tight group-hover:text-[#FF6B35] transition-colors duration-300">
+                          {module.title}
+                        </h3>
                       </div>
-                    ))}
-                    
-                    {module.lessons.length > 3 && (
-                      <div className="text-center py-2">
-                        <span className="text-sm text-gray-500 font-mono">
-                          +{module.lessons.length - 3} more topics
-                        </span>
+                      
+                      {/* Stats */}
+                      <div className="flex flex-wrap gap-3 sm:gap-4">
+                        <motion.div 
+                          className="flex items-center gap-2 px-3 py-1 bg-red-50 rounded-full border border-red-200"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+                          <span className="text-xs font-medium text-red-600">
+                            {module.sessions} LIVE SESSION
+                          </span>
+                        </motion.div>
+                        <motion.div 
+                          className="flex items-center gap-2 px-3 py-1 bg-amber-50 rounded-full border border-amber-200"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
+                          <span className="text-xs font-medium text-amber-600">
+                            {module.assignments} ASSIGNMENT
+                          </span>
+                        </motion.div>
                       </div>
-                    )}
-                  </div>
-                  
-                  {/* Capstone Project for Week 4 */}
-                  {module.week === 4 && (
-                    <div className="mt-4 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-lg border border-orange-200">
-                      <h4 className="font-bold text-orange-800 mb-2">🏆 Capstone Project</h4>
-                      <p className="text-orange-700 text-sm font-mono">
-                        Deliver a working AI-powered marketing campaign with creative generation, 
-                        agent design, AEO optimization, and launch via Mesha.
-                      </p>
                     </div>
-                  )}
-                </motion.div>
+                    
+                    {/* Lessons Grid */}
+                    <div className="space-y-3 mb-6">
+                      {module.lessons.slice(0, 4).map((lesson, j) => (
+                        <motion.div 
+                          key={j} 
+                          className="flex items-start gap-3 p-3 bg-[#F8F9FA] rounded-xl border border-[#E8E8E8] hover:border-[#FF6B35]/30 transition-colors duration-300"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: j * 0.1, duration: 0.5 }}
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          <div className={`w-8 h-8 ${module.bgColor} ${module.borderColor} border rounded-full flex items-center justify-center flex-shrink-0`}>
+                            <span className="text-sm">📚</span>
+                          </div>
+                          <span className="text-sm sm:text-base text-[#1A1A1A]/80 leading-relaxed">
+                            {lesson}
+                          </span>
+                        </motion.div>
+                      ))}
+                      
+                      {module.lessons.length > 4 && (
+                        <motion.div 
+                          className="text-center py-3"
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
+                          transition={{ delay: 0.5 }}
+                        >
+                          <span className="text-sm text-[#1A1A1A]/50 font-medium">
+                            +{module.lessons.length - 4} more topics covered
+                          </span>
+                        </motion.div>
+                      )}
+                    </div>
+                    
+                    {/* Capstone Project for Week 4 */}
+                    {module.week === 4 && (
+                      <motion.div 
+                        className="p-6 bg-gradient-to-br from-[#FF6B35]/10 to-orange-50 rounded-2xl border border-[#FF6B35]/20"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.3, duration: 0.6 }}
+                        whileHover={{ scale: 1.02 }}
+                      >
+                        <div className="flex items-start gap-3 mb-3">
+                          <span className="text-2xl">🏆</span>
+                          <h4 className="font-bold text-[#FF6B35] text-lg">
+                            Capstone Project
+                          </h4>
+                        </div>
+                        <p className="text-[#1A1A1A]/80 text-sm sm:text-base leading-relaxed">
+                          Deliver a complete AI-powered marketing campaign with creative generation, 
+                          agent design, AEO optimization, and launch via Mesha platform.
+                        </p>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
         
-        {/* View More Button */}
+        {/* Bottom CTA */}
         <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center mt-12 sm:mt-16"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <motion.button
-            className="px-8 py-3 border-2 border-[#FF5A1F] text-[#FF5A1F] rounded-xl font-bold hover:bg-[#FF5A1F] hover:text-white transition-all duration-300"
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-2xl border-2 border-[#E8E8E8] text-[#1A1A1A] hover:border-[#FF6B35] hover:text-[#FF6B35] transition-all duration-300 bg-white shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Full Curriculum
+            <span className="font-semibold">View Full Curriculum</span>
+            <motion.svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </motion.svg>
           </motion.button>
         </motion.div>
       </div>
