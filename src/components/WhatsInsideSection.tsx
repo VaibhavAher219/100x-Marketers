@@ -69,7 +69,7 @@ export default function WhatsInsideSection() {
               What&apos;s <span className="text-[#FF6B35]">Inside?</span>
             </h2>
             <p className="text-xl text-[#1A1A1A]/70 max-w-2xl mx-auto">
-              This isn't just another course. It's a career transformation program.
+              This isn&apos;t just another course. It&apos;s a career transformation program.
             </p>
           </motion.div>
 

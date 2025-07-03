@@ -89,7 +89,7 @@ export default function CreationsSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <motion.div
               key={project.name}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 border border-[#E8E8E8]"

@@ -34,18 +34,6 @@ export default function TracksSection() {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-  };
-
   return (
     <section className="w-full py-20 bg-[#F8F9FA]">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">

@@ -194,7 +194,7 @@ export default function CurriculumSection() {
               <h3 className="text-sm font-bold uppercase tracking-widest text-[#FF6B35] mb-4">CAPSTONE PROJECT</h3>
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Build a Real AI Marketing Product</h2>
               <p className="text-lg lg:text-xl text-white/70 max-w-3xl mx-auto mb-8">
-                Apply everything you've learned to build a fully functional AI-powered marketing campaign or tool from scratch. This project will be the centerpiece of your portfolio.
+                Apply everything you&apos;ve learned to build a fully functional AI-powered marketing campaign or tool from scratch. This project will be the centerpiece of your portfolio.
               </p>
               <motion.a
                 href="#"

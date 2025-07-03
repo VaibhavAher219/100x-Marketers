@@ -76,7 +76,7 @@ export default function ToolsSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {tools.map((tool, i) => (
+          {tools.map((tool) => (
             <motion.div
               key={tool.name}
               className="group bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#E8E8E8] flex flex-col items-center text-center"
@@ -129,7 +129,7 @@ export default function ToolsSection() {
                 { icon: '🎨', text: 'Visual Content' },
                 { icon: '🎬', text: 'Video Creation' },
                 { icon: '🚀', text: 'Automation' }
-              ].map((feature, index) => (
+              ].map((feature) => (
                 <div
                   key={feature.text}
                   className="flex flex-col items-center gap-3 p-4 bg-[#F8F9FA] rounded-2xl border border-[#E8E8E8]"
