@@ -57,9 +57,9 @@ export default function WhySection() {
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
+        {/* Main Content Grid - Aligned at top */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -68,32 +68,35 @@ export default function WhySection() {
           
           {/* Elite Marketing AI Community */}
           <motion.div 
-            className="group relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden"
+            className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden h-full flex flex-col"
             variants={itemVariants}
             whileHover={{ y: -8 }}
           >
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            {/* Profile Pictures Grid - Better Aligned */}
-            <div className="relative mb-8 h-48 sm:h-56 flex items-center justify-center">
-              <div className="relative w-full h-full">
+            {/* Profile Pictures Grid - Perfectly Aligned */}
+            <div className="relative mb-8 h-64 flex items-center justify-center">
+              <div className="relative w-64 h-64">
                 
-                {/* Center Large Profile */}
+                {/* Center Large Profile - AI */}
                 <motion.div 
                   className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-[#FF6B35] to-[#FF8A65] border-4 border-white shadow-xl flex items-center justify-center z-10"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
+                  whileHover={{ scale: 1.15, zIndex: 20 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <span className="text-white font-bold text-lg">AI</span>
                 </motion.div>
                 
-                {/* Surrounding Profiles */}
+                {/* Perfectly Positioned Surrounding Profiles - All Same Size */}
+                
+                {/* Top Left - JS */}
                 <motion.div 
-                  className="absolute top-8 left-8 w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 border-3 border-white shadow-lg flex items-center justify-center"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
+                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 border-4 border-white shadow-lg flex items-center justify-center"
+                  style={{ top: '15%', left: '15%' }}
+                  whileHover={{ scale: 1.15, zIndex: 20 }}
                   animate={{ 
-                    y: [0, -10, 0],
+                    y: [0, -8, 0],
                     rotate: [0, 5, 0]
                   }}
                   transition={{ 
@@ -105,9 +108,11 @@ export default function WhySection() {
                   <span className="text-white font-bold text-sm">JS</span>
                 </motion.div>
                 
+                {/* Top Right - MK */}
                 <motion.div 
-                  className="absolute top-6 right-12 w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 border-3 border-white shadow-lg flex items-center justify-center"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
+                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 border-4 border-white shadow-lg flex items-center justify-center"
+                  style={{ top: '15%', right: '15%' }}
+                  whileHover={{ scale: 1.15, zIndex: 20 }}
                   animate={{ 
                     y: [0, 8, 0],
                     rotate: [0, -5, 0]
@@ -119,12 +124,14 @@ export default function WhySection() {
                     delay: 1
                   }}
                 >
-                  <span className="text-white font-bold">MK</span>
+                  <span className="text-white font-bold text-sm">MK</span>
                 </motion.div>
                 
+                {/* Bottom Left - LP */}
                 <motion.div 
-                  className="absolute bottom-12 left-12 w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 border-3 border-white shadow-lg flex items-center justify-center"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
+                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-600 border-4 border-white shadow-lg flex items-center justify-center"
+                  style={{ bottom: '15%', left: '15%' }}
+                  whileHover={{ scale: 1.15, zIndex: 20 }}
                   animate={{ 
                     y: [0, -8, 0],
                     rotate: [0, 3, 0]
@@ -136,12 +143,14 @@ export default function WhySection() {
                     delay: 2
                   }}
                 >
-                  <span className="text-white font-bold text-xs">LP</span>
+                  <span className="text-white font-bold text-sm">LP</span>
                 </motion.div>
                 
+                {/* Bottom Right - RH */}
                 <motion.div 
-                  className="absolute bottom-8 right-8 w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 border-3 border-white shadow-lg flex items-center justify-center"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
+                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 border-4 border-white shadow-lg flex items-center justify-center"
+                  style={{ bottom: '15%', right: '15%' }}
+                  whileHover={{ scale: 1.15, zIndex: 20 }}
                   animate={{ 
                     y: [0, 12, 0],
                     rotate: [0, -3, 0]
@@ -153,74 +162,73 @@ export default function WhySection() {
                     delay: 0.5
                   }}
                 >
-                  <span className="text-white font-bold">RH</span>
+                  <span className="text-white font-bold text-sm">RH</span>
                 </motion.div>
                 
-                <motion.div 
-                  className="absolute top-20 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 border-3 border-white shadow-lg flex items-center justify-center"
-                  whileHover={{ scale: 1.1, zIndex: 20 }}
-                  animate={{ 
-                    y: [0, -6, 0],
-                    rotate: [0, 4, 0]
-                  }}
-                  transition={{ 
-                    duration: 3.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1.5
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">AS</span>
-                </motion.div>
-                
-                {/* Connecting Lines */}
+                {/* Connecting Lines - Perfectly Centered */}
                 <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-                  <motion.path
-                    d="M 50% 50% L 20% 20%"
+                  <motion.line
+                    x1="32%" y1="32%" x2="50%" y2="50%"
                     stroke="#FF6B35"
                     strokeWidth="2"
-                    strokeOpacity="0.3"
-                    fill="none"
+                    strokeOpacity="0.4"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}
                     transition={{ duration: 2, ease: "easeInOut" }}
                   />
-                  <motion.path
-                    d="M 50% 50% L 80% 20%"
+                  <motion.line
+                    x1="68%" y1="32%" x2="50%" y2="50%"
                     stroke="#FF6B35"
                     strokeWidth="2"
-                    strokeOpacity="0.3"
-                    fill="none"
+                    strokeOpacity="0.4"
                     initial={{ pathLength: 0 }}
                     whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
+                    transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
+                  />
+                  <motion.line
+                    x1="32%" y1="68%" x2="50%" y2="50%"
+                    stroke="#FF6B35"
+                    strokeWidth="2"
+                    strokeOpacity="0.4"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut", delay: 0.6 }}
+                  />
+                  <motion.line
+                    x1="68%" y1="68%" x2="50%" y2="50%"
+                    stroke="#FF6B35"
+                    strokeWidth="2"
+                    strokeOpacity="0.4"
+                    initial={{ pathLength: 0 }}
+                    whileInView={{ pathLength: 1 }}
+                    transition={{ duration: 2, ease: "easeInOut", delay: 0.9 }}
                   />
                 </svg>
               </div>
             </div>
             
-            <div className="relative z-10">
+            <div className="relative z-10 flex-1 flex flex-col">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-[#FF6B35]">
                 Elite Marketing AI Community
               </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg">
+              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg mb-8 flex-1">
                 Join the exclusive network of AI Marketing Wizards who are pioneering the future of marketing. 
                 Get mentorship, collaborate on projects, and build lifelong connections.
               </p>
               
-              {/* Stats */}
-              <div className="flex items-center gap-6 mt-6">
+              {/* Stats - Perfectly Aligned */}
+              <div className="grid grid-cols-3 gap-4 bg-[#F8F9FA] rounded-2xl p-6 border border-[#E8E8E8]">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#FF6B35]">500+</div>
-                  <div className="text-sm text-[#1A1A1A]/60">Members</div>
+                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">500+</div>
+                  <div className="text-sm font-medium text-[#1A1A1A]/60">Members</div>
+                </div>
+                <div className="text-center border-l border-r border-[#E8E8E8]">
+                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">24/7</div>
+                  <div className="text-sm font-medium text-[#1A1A1A]/60">Support</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#FF6B35]">24/7</div>
-                  <div className="text-sm text-[#1A1A1A]/60">Support</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-[#FF6B35]">∞</div>
-                  <div className="text-sm text-[#1A1A1A]/60">Access</div>
+                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">∞</div>
+                  <div className="text-sm font-medium text-[#1A1A1A]/60">Access</div>
                 </div>
               </div>
             </div>
@@ -228,97 +236,117 @@ export default function WhySection() {
 
           {/* Learn from Marketing AI Experts */}
           <motion.div 
-            className="group relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden"
+            className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden h-full flex flex-col"
             variants={itemVariants}
             whileHover={{ y: -8 }}
           >
             {/* Background Gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            {/* Expert Profiles */}
-            <div className="relative mb-8 h-48 sm:h-56 flex items-center justify-center">
-              <div className="relative">
-                <motion.div
-                  className="flex items-center justify-center gap-4"
-                  whileHover={{ scale: 1.02 }}
+            {/* Expert Profiles - Perfectly Centered */}
+            <div className="relative mb-8 h-64 flex items-center justify-center">
+              <div className="relative flex items-center justify-center gap-6">
+                
+                {/* AI Block - Mentor */}
+                <motion.div 
+                  className="relative"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  {/* Expert 1 */}
                   <motion.div 
-                    className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
-                    whileHover={{ scale: 1.1, rotate: 3 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
+                    animate={{ 
+                      rotate: [0, 2, 0],
+                    }}
+                    transition={{ 
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
                   >
-                    <span className="text-white font-bold text-lg">AI</span>
+                    <span className="text-white font-bold text-xl">AI</span>
                     <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </motion.div>
                   
-                  {/* Expert 2 */}
-                  <motion.div 
-                    className="w-24 h-24 rounded-2xl bg-gradient-to-br from-[#FF6B35] to-[#FF8A65] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
-                    whileHover={{ scale: 1.1, rotate: -3 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                  {/* Mentor Label - Larger and More Prominent */}
+                  <motion.div
+                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[#0A0A0A] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg"
+                    animate={{ 
+                      y: [0, -4, 0],
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
                   >
-                    <span className="text-white font-bold text-lg">EX</span>
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    Mentor
                   </motion.div>
                 </motion.div>
                 
-                {/* Floating badges */}
-                <motion.div
-                  className="absolute -top-4 -right-4 bg-[#FF6B35] text-white text-xs px-3 py-1 rounded-full font-bold"
-                  animate={{ 
-                    y: [0, -8, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
+                {/* EX Block - Expert */}
+                <motion.div 
+                  className="relative"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  Expert
-                </motion.div>
-                
-                <motion.div
-                  className="absolute -bottom-4 -left-4 bg-[#0A0A0A] text-white text-xs px-3 py-1 rounded-full font-bold"
-                  animate={{ 
-                    y: [0, 8, 0],
-                    rotate: [0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1.5
-                  }}
-                >
-                  Mentor
+                  <motion.div 
+                    className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#FF6B35] to-[#FF8A65] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
+                    animate={{ 
+                      rotate: [0, -2, 0],
+                    }}
+                    transition={{ 
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 3
+                    }}
+                  >
+                    <span className="text-white font-bold text-xl">EX</span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.div>
+                  
+                  {/* Expert Label - Larger and More Prominent */}
+                  <motion.div
+                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[#FF6B35] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg"
+                    animate={{ 
+                      y: [0, -4, 0],
+                    }}
+                    transition={{ 
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.5
+                    }}
+                  >
+                    Expert
+                  </motion.div>
                 </motion.div>
               </div>
             </div>
             
-            <div className="relative z-10">
+            <div className="relative z-10 flex-1 flex flex-col">
               <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-[#FF6B35]">
                 Learn from Marketing AI Experts
               </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg">
+              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg mb-8 flex-1">
                 Your mentors are industry pioneers with decades of experience building AI marketing systems 
                 that generated millions in revenue. Learn from the best in the field.
               </p>
               
-              {/* Expertise Areas */}
-              <div className="flex flex-wrap gap-3 mt-6">
+              {/* Expertise Areas - Perfectly Spaced */}
+              <div className="grid grid-cols-2 gap-3">
                 {['AI Strategy', 'Automation', 'Analytics', 'Growth'].map((skill, index) => (
-                  <motion.span
+                  <motion.div
                     key={skill}
-                    className="px-4 py-2 bg-[#F8F9FA] text-[#1A1A1A] rounded-full text-sm font-medium border border-[#E8E8E8]"
+                    className="px-4 py-3 bg-[#F8F9FA] text-[#1A1A1A] rounded-xl text-sm font-semibold border border-[#E8E8E8] text-center hover:border-[#FF6B35] hover:bg-[#FF6B35] hover:text-white transition-all duration-300"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
-                    whileHover={{ scale: 1.05, borderColor: '#FF6B35' }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     {skill}
-                  </motion.span>
+                  </motion.div>
                 ))}
               </div>
             </div>
