@@ -7,7 +7,7 @@ export default function Hero() {
   const y = useTransform(scrollY, [0, 300], [0, 100]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA]">
+    <section className="relative min-h-[calc(100vh-7rem)] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA] py-20">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient Orbs */}

@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased font-sans`}
       >
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
         
         {/* Floating Chat Widgets - Matching Screenshot */}

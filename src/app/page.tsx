@@ -12,6 +12,9 @@ import CTASection from '../components/CTASection';
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Spacer for fixed header - accounts for announcement banner (48px) + header (64px) = 112px */}
+      <div className="h-28"></div>
+      
       {/* Hero Section */}
       <Hero />
       
