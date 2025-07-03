@@ -261,7 +261,7 @@ export default function CreationsSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="font-semibold">See What You'll Build</span>
+            <span className="font-semibold">See What You&apos;ll Build</span>
             <motion.svg
               className="w-5 h-5"
               fill="none"

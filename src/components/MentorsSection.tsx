@@ -83,7 +83,7 @@ export default function MentorsSection() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <span className="w-2 h-2 bg-[#FF6B35] rounded-full animate-pulse"></span>
-            WHO'S TEACHING
+            WHO&apos;S TEACHING
           </motion.span>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A0A0A] mb-6 leading-tight">
@@ -103,7 +103,7 @@ export default function MentorsSection() {
           </h2>
           
           <p className="text-lg sm:text-xl text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
-            Get mentored by industry leaders who've built and scaled AI marketing systems
+            Get mentored by industry leaders who&apos;ve built and scaled AI marketing systems
           </p>
         </motion.div>
 
