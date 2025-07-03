@@ -1,126 +1,44 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-// Move headlines outside component to avoid dependency issues
-const headlines = [
-  {
-    main: "Become an AI-Powered",
-    accent: "Performance Marketer",
-    description: "Master the future of marketing with AI-driven strategies that deliver 10x growth"
-  },
-  {
-    main: "Unlock Your 100x",
-    accent: "Marketing Potential",
-    description: "Transform from beginner to AI marketing expert in just 4 weeks"
-  },
-  {
-    main: "Master AI & Dominate",
-    accent: "Your Market",
-    description: "Learn cutting-edge AI tools and strategies used by top marketers worldwide"
-  },
-  {
-    main: "Transform Your Marketing",
-    accent: "Career with AI",
-    description: "Join the elite community of AI-powered marketers driving unprecedented results"
-  },
-  {
-    main: "Scale Your Impact with",
-    accent: "AI Marketing",
-    description: "Build automated marketing systems that work while you sleep"
-  }
-];
-
 export default function Hero() {
-  const [currentHeadline, setCurrentHeadline] = useState(0);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, 100]);
 
-  // Cycle through headlines every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentHeadline((prev) => (prev + 1) % headlines.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA]">
-      {/* Sophisticated Background Elements */}
+      {/* Subtle Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Animated Gradient Orbs */}
+        {/* Gradient Orbs */}
         <motion.div
-          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FF6B35]/20 to-[#FF6B35]/10 rounded-full blur-3xl"
+          className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF6B35]/5 rounded-full blur-3xl"
           animate={{
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-[#FF6B35]/15 to-[#FF6B35]/5 rounded-full blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 20, 0],
-            scale: [1, 0.8, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-
-        {/* Floating Elements */}
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-3 h-3 bg-[#FF6B35] rounded-full opacity-60"
-          animate={{
+            x: [0, 30, 0],
             y: [0, -20, 0],
-            opacity: [0.6, 1, 0.6],
           }}
           transition={{
-            duration: 3,
+            duration: 20,
             repeat: Infinity,
             ease: "easeInOut",
           }}
         />
         
         <motion.div
-          className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-[#FF6B35] rounded-full opacity-40"
+          className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-[#FF6B35]/8 to-[#FF6B35]/3 rounded-full blur-3xl"
           animate={{
+            x: [0, -20, 0],
             y: [0, 15, 0],
-            x: [0, 10, 0],
-            opacity: [0.4, 0.8, 0.4],
           }}
           transition={{
-            duration: 5,
+            duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
-          }}
-        />
-
-        {/* Geometric Shapes */}
-        <motion.div
-          className="absolute top-1/2 left-10 w-16 h-16 border-2 border-[#FF6B35]/20 rotate-45"
-          animate={{
-            rotate: [45, 405, 45],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "linear",
           }}
         />
       </div>
 
-      {/* Parallax Content Container */}
+      {/* Main Content */}
       <motion.div
         style={{ y }}
         className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center"
@@ -138,45 +56,44 @@ export default function Hero() {
           </span>
         </motion.div>
 
-        {/* Dynamic Headlines */}
-        <div className="mb-6 h-32 sm:h-40 lg:h-48 flex items-center justify-center">
-          <motion.h1
-            key={currentHeadline}
-            className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-[#0A0A0A] leading-tight"
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -50, scale: 1.1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <span className="block mb-2">
-              {headlines[currentHeadline].main}
+        {/* Main Headline */}
+        <motion.h1
+          className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-[#0A0A0A] leading-tight mb-6"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <span className="block mb-4">
+            Transform Your
+          </span>
+          <span className="relative inline-block">
+            <span className="text-[#FF6B35]">
+              Marketing Career
             </span>
-            <span className="relative inline-block">
-              <span className="text-[#FF6B35]">
-                {headlines[currentHeadline].accent}
-              </span>
-              <motion.div
-                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF6B35]/60 rounded-full"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              />
-            </span>
-          </motion.h1>
-        </div>
+            <motion.div
+              className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF6B35]/60 rounded-full"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+            />
+          </span>
+          <span className="block mt-4">
+            with AI
+          </span>
+        </motion.h1>
 
-        {/* Dynamic Subheadlines */}
+        {/* Subheadline */}
         <motion.p
-          key={`sub-${currentHeadline}`}
           className="text-lg sm:text-xl lg:text-2xl text-[#1A1A1A]/80 mb-8 max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {headlines[currentHeadline].description}
+          Join the elite community of AI-powered marketers and master cutting-edge strategies 
+          that deliver 10x growth in just 4 weeks
         </motion.p>
 
-        {/* Additional Context */}
+        {/* Program Features */}
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mb-12 text-[#1A1A1A]/60"
           initial={{ opacity: 0 }}
