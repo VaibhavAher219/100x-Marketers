@@ -2,53 +2,42 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
+// Move headlines outside component to avoid dependency issues
+const headlines = [
+  {
+    main: "Become an AI-Powered",
+    accent: "Performance Marketer",
+    description: "Master the future of marketing with AI-driven strategies that deliver 10x growth"
+  },
+  {
+    main: "Unlock Your 100x",
+    accent: "Marketing Potential",
+    description: "Transform from beginner to AI marketing expert in just 4 weeks"
+  },
+  {
+    main: "Master AI & Dominate",
+    accent: "Your Market",
+    description: "Learn cutting-edge AI tools and strategies used by top marketers worldwide"
+  },
+  {
+    main: "Transform Your Marketing",
+    accent: "Career with AI",
+    description: "Join the elite community of AI-powered marketers driving unprecedented results"
+  },
+  {
+    main: "Scale Your Impact with",
+    accent: "AI Marketing",
+    description: "Build automated marketing systems that work while you sleep"
+  }
+];
+
 export default function Hero() {
   const [currentHeadline, setCurrentHeadline] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 300], [0, 100]);
 
-  // 5 Headline Variations focusing on benefits to the user
-  const headlines = [
-    {
-      main: "Become an AI-Powered",
-      accent: "Performance Marketer",
-      description: "Master the future of marketing with AI-driven strategies that deliver 10x growth"
-    },
-    {
-      main: "Unlock Your 100x",
-      accent: "Marketing Potential",
-      description: "Transform from beginner to AI marketing expert in just 4 weeks"
-    },
-    {
-      main: "Master AI & Dominate",
-      accent: "Your Market",
-      description: "Learn cutting-edge AI tools and strategies used by top marketers worldwide"
-    },
-    {
-      main: "Transform Your Marketing",
-      accent: "Career with AI",
-      description: "Join the elite community of AI-powered marketers driving unprecedented results"
-    },
-    {
-      main: "Scale Your Impact with",
-      accent: "AI Marketing",
-      description: "Build automated marketing systems that work while you sleep"
-    }
-  ];
-
-  // 5 Subheadline Variations focusing on results
-  const subheadlines = [
-    "Learn the skills to drive 10x growth with AI-powered automation",
-    "Get certified and build a career in AI marketing that pays 6-figures",
-    "Join a community of elite AI marketers and scale your impact",
-    "Master the tools used by Fortune 500 companies to dominate markets",
-    "Build automated marketing systems that generate leads 24/7"
-  ];
-
   // Cycle through headlines every 4 seconds
   useEffect(() => {
-    setIsLoaded(true);
     const interval = setInterval(() => {
       setCurrentHeadline((prev) => (prev + 1) % headlines.length);
     }, 4000);
