@@ -70,80 +70,80 @@ const modules = [
 
 export default function CurriculumSection() {
   return (
-    <section className="relative w-full py-20 bg-white">
+    <section className="relative w-full py-24 bg-white">
       <div className="container mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold tracking-wide mb-6">
+        <div className="text-center mb-20">
+          <span className="inline-block px-6 py-3 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold tracking-wide mb-8">
             4-WEEK CURRICULUM
           </span>
           
-          <h2 className="font-bold text-[#0A0A0A] mb-6">
+          <h2 className="font-bold text-[#0A0A0A] mb-8">
             What will you <span className="text-[#FF6B35]">learn?</span>
           </h2>
           
-          <div className="space-y-3 mb-8">
-            <p className="text-[#1A1A1A]/80 font-semibold">
+          <div className="space-y-4 mb-12">
+            <p className="text-[#1A1A1A]/80 font-semibold text-xl">
               Gen AI × Marketing: 4-Week Intensive Course
             </p>
-            <p className="text-[#1A1A1A]/60">
+            <p className="text-[#1A1A1A]/60 text-lg">
               From Zero to Marketing AI Wizard in 4 weeks
             </p>
           </div>
         </div>
 
         {/* Curriculum Timeline */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           {modules.map((module) => (
-            <div key={module.week} className="relative mb-12 last:mb-0">
+            <div key={module.week} className="relative mb-20 last:mb-0">
               
               {/* Week Header */}
-              <div className="flex items-center gap-6 mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${module.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                  <span className="text-2xl">{module.icon}</span>
+              <div className="flex items-center gap-8 mb-8">
+                <div className={`w-20 h-20 bg-gradient-to-br ${module.color} rounded-3xl flex items-center justify-center shadow-lg`}>
+                  <span className="text-3xl">{module.icon}</span>
                 </div>
-                <div>
-                  <div className="text-xs text-[#1A1A1A]/50 font-medium uppercase tracking-wider mb-1">
+                <div className="flex-1">
+                  <div className="text-sm text-[#1A1A1A]/50 font-medium uppercase tracking-wider mb-2">
                     WEEK {module.week} • {module.subtitle}
                   </div>
-                  <h3 className="font-bold text-[#0A0A0A] leading-tight">
+                  <h3 className="font-bold text-[#0A0A0A] leading-tight text-2xl">
                     {module.title}
                   </h3>
                 </div>
               </div>
 
               {/* Module Content */}
-              <div className="bg-white rounded-2xl p-8 border border-[#E8E8E8] shadow-sm">
+              <div className="bg-white rounded-3xl p-10 border border-[#E8E8E8] shadow-sm ml-14">
                 
                 {/* Session Info */}
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <div className="flex items-center gap-2 px-3 py-1 bg-red-50 rounded-full border border-red-200">
-                    <span className="w-2 h-2 bg-red-500 rounded-full"></span>
-                    <span className="text-xs font-semibold text-red-600">
+                <div className="flex flex-wrap gap-4 mb-8">
+                  <div className="flex items-center gap-3 px-4 py-2 bg-red-50 rounded-full border border-red-200">
+                    <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+                    <span className="text-sm font-semibold text-red-600">
                       {module.sessions} LIVE SESSION
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 px-3 py-1 bg-amber-50 rounded-full border border-amber-200">
-                    <span className="w-2 h-2 bg-amber-500 rounded-full"></span>
-                    <span className="text-xs font-semibold text-amber-600">
+                  <div className="flex items-center gap-3 px-4 py-2 bg-amber-50 rounded-full border border-amber-200">
+                    <span className="w-3 h-3 bg-amber-500 rounded-full"></span>
+                    <span className="text-sm font-semibold text-amber-600">
                       {module.assignments} ASSIGNMENT
                     </span>
                   </div>
                 </div>
                 
                 {/* Lessons */}
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {module.lessons.map((lesson, j) => (
-                    <div key={j} className="flex items-start gap-4 p-4 bg-[#F8F9FA] rounded-xl">
-                      <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white rounded-lg border border-[#E8E8E8]">
-                        <span className="text-sm">💡</span>
+                    <div key={j} className="flex items-start gap-5 p-5 bg-[#F8F9FA] rounded-2xl">
+                      <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-white rounded-xl border border-[#E8E8E8] shadow-sm">
+                        <span className="text-lg">💡</span>
                       </div>
-                      <span className="text-sm font-medium text-[#1A1A1A]/80 leading-relaxed">{lesson}</span>
+                      <span className="text-base font-medium text-[#1A1A1A]/80 leading-relaxed pt-1">{lesson}</span>
                     </div>
                   ))}
-                  <div className="text-center pt-4">
-                    <span className="text-sm text-[#1A1A1A]/50">+ 3 more topics covered</span>
+                  <div className="text-center pt-6">
+                    <span className="text-base text-[#1A1A1A]/50 font-medium">+ 3 more topics covered</span>
                   </div>
                 </div>
               </div>
@@ -151,16 +151,16 @@ export default function CurriculumSection() {
           ))}
 
           {/* Capstone Project Section */}
-          <div className="relative text-center mt-16">
-            <div className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] text-white rounded-2xl p-12 shadow-lg">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-[#FF6B35] mb-4">CAPSTONE PROJECT</h3>
-              <h2 className="font-bold mb-6 text-white">Build a Real AI Marketing Product</h2>
-              <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <div className="relative text-center mt-24">
+            <div className="bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] text-white rounded-3xl p-16 shadow-lg">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-[#FF6B35] mb-6">CAPSTONE PROJECT</h3>
+              <h2 className="font-bold mb-8 text-white text-3xl">Build a Real AI Marketing Product</h2>
+              <p className="text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed text-lg">
                 Apply everything you&apos;ve learned to build a fully functional AI-powered marketing campaign or tool from scratch. This project will be the centerpiece of your portfolio.
               </p>
               <a
                 href="#"
-                className="inline-block px-8 py-4 rounded-xl bg-[#FF6B35] text-white font-bold hover:bg-white hover:text-[#FF6B35] transition-colors duration-300"
+                className="inline-block px-10 py-5 rounded-2xl bg-[#FF6B35] text-white font-bold text-lg hover:bg-white hover:text-[#FF6B35] transition-colors duration-300"
               >
                 See Project Examples
               </a>

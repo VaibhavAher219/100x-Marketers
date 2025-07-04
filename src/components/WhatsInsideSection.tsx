@@ -13,72 +13,76 @@ const features = [
   { name: 'GPU credits from AWS for 5 projects', icon: '☁️' },
 ];
 
-const companies = [
-  'unacademy',
-  'Mahindra',
-  'sentient',
-  'NEROLAC'
-];
+
 
 export default function WhatsInsideSection() {
   return (
-    <section className="w-full py-20 bg-[#F8F9FA]">
+    <section className="relative w-full py-24 bg-white">
       <div className="container mx-auto">
-        {/* Companies Section */}
+        
+        {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-[#1A1A1A]/60 font-medium mb-8">
-            Students working with top companies like
+          <span className="inline-block px-6 py-3 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold tracking-wide mb-8">
+            WHAT&apos;S INSIDE
+          </span>
+          
+          <h2 className="font-bold text-[#0A0A0A] mb-8">
+            Everything you need to <span className="text-[#FF6B35]">succeed</span>
+          </h2>
+          
+          <p className="text-[#1A1A1A]/60 max-w-3xl mx-auto text-lg leading-relaxed">
+            A comprehensive program designed to take you from beginner to AI marketing expert
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            {companies.map((company) => (
-              <div
-                key={company}
-                className="text-2xl font-bold text-[#1A1A1A]/40 tracking-wider hover:text-[#FF6B35] transition-colors duration-300"
-              >
-                {company}
-              </div>
-            ))}
-          </div>
         </div>
 
-        {/* Main Content */}
-        <div className="bg-white rounded-2xl border border-[#E8E8E8] p-12">
-          <div className="text-center mb-16">
-            <span className="inline-block px-5 py-2 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold tracking-wide mb-6">
-              PROGRAM OVERVIEW
-            </span>
-            <h2 className="font-bold mb-4 text-[#0A0A0A]">
-              What&apos;s <span className="text-[#FF6B35]">Inside?</span>
-            </h2>
-            <p className="text-[#1A1A1A]/70 max-w-2xl mx-auto">
-              This isn&apos;t just another course. It&apos;s a career transformation program.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {features.map((feature) => (
-              <div
-                key={feature.name}
-                className="flex items-center gap-4 p-6 rounded-xl bg-[#F8F9FA] border border-[#E8E8E8] hover:border-[#FF6B35]/50 hover:bg-white transition-colors duration-300"
-              >
-                <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl border border-[#E8E8E8]">
-                  {feature.icon}
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="group">
+              <div className="bg-white rounded-3xl p-8 border border-[#E8E8E8] shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                {/* Feature Icon */}
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF6B35]/20 rounded-2xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <span className="text-2xl">{feature.icon}</span>
                 </div>
-                <span className="font-semibold text-[#1A1A1A]">
-                  {feature.name}
-                </span>
+                
+                {/* Feature Content */}
+                <div className="space-y-4">
+                  <h3 className="font-bold text-[#0A0A0A] text-xl text-center">
+                    {feature.name}
+                  </h3>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          {/* Call to Action */}
-          <div className="text-center">
-            <a
-              href="#"
-              className="inline-block px-10 py-4 rounded-xl bg-[#0A0A0A] text-white font-bold hover:bg-[#FF6B35] transition-colors duration-300"
-            >
-              Secure Your Spot
-            </a>
+        {/* Summary Stats */}
+        <div className="bg-gradient-to-r from-[#F8F9FA] to-[#F0F0F0] rounded-3xl p-12 border border-[#E8E8E8]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2">
+                4
+              </div>
+              <div className="text-[#1A1A1A]/60 font-medium">
+                Weeks of Intensive Training
+              </div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2">
+                $10,000+
+              </div>
+              <div className="text-[#1A1A1A]/60 font-medium">
+                Total Value Included
+              </div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-[#FF6B35] mb-2">
+                100%
+              </div>
+              <div className="text-[#1A1A1A]/60 font-medium">
+                Practical, Hands-on Learning
+              </div>
+            </div>
           </div>
         </div>
       </div>

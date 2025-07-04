@@ -42,116 +42,87 @@ const mentors = [
 
 export default function MentorsSection() {
   return (
-    <section className="relative w-full py-20 bg-white">
+    <section className="relative w-full py-24 bg-[#F8F9FA]">
       <div className="container mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-[#FF6B35] rounded-full"></span>
-            WHO&apos;S TEACHING
+        <div className="text-center mb-20">
+          <span className="inline-block px-6 py-3 rounded-full bg-[#FF6B35]/10 text-[#FF6B35] text-sm font-bold tracking-wide mb-8">
+            EXPERT MENTORS
           </span>
           
-          <h2 className="font-bold text-[#0A0A0A] mb-6">
-            Learn from{' '}
-            <span className="text-[#FF6B35]">Marketing AI Experts</span>
+          <h2 className="font-bold text-[#0A0A0A] mb-8">
+            Learn from <span className="text-[#FF6B35]">Industry Leaders</span>
           </h2>
           
-          <p className="text-[#1A1A1A]/70 max-w-3xl mx-auto">
-            Get mentored by industry leaders who&apos;ve built and scaled AI marketing systems
+          <p className="text-[#1A1A1A]/60 max-w-3xl mx-auto text-lg leading-relaxed">
+            Get guidance from marketing experts who have built successful AI-powered campaigns for top brands.
           </p>
         </div>
 
         {/* Mentors Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {mentors.map((mentor, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl p-6 border border-[#E8E8E8] hover:border-[#FF6B35]/30 transition-colors duration-300"
-            >
-              {/* Photo */}
-              <div className="relative mb-6">
-                <div className={`w-full h-48 rounded-xl bg-gradient-to-br ${mentor.color} flex items-center justify-center relative`}>
-                  {/* Avatar */}
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/30">
-                    <span className="text-white text-2xl font-bold">
-                      {mentor.role}
-                    </span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {mentors.map((mentor, index) => (
+            <div key={index} className="group">
+              <div className="bg-white rounded-3xl p-8 border border-[#E8E8E8] shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                {/* Mentor Avatar */}
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#FF6B35]/10 to-[#FF6B35]/20 rounded-2xl mb-6 group-hover:scale-105 transition-transform duration-300">
+                  <span className="text-xl font-bold text-[#FF6B35]">{mentor.role}</span>
+                </div>
+                
+                {/* Mentor Info */}
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-bold text-[#0A0A0A] text-xl mb-2">
+                      {mentor.name}
+                    </h3>
+                    <p className="text-[#1A1A1A]/50 text-sm font-medium">
+                      {mentor.title}
+                    </p>
                   </div>
-                </div>
-                
-                {/* Status indicator */}
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#FF6B35] rounded-full border-4 border-white flex items-center justify-center">
-                  <span className="w-2 h-2 bg-white rounded-full"></span>
-                </div>
-              </div>
-              
-              {/* Content */}
-              <div>
-                {/* Name & Title */}
-                <h3 className="font-bold mb-2 text-[#0A0A0A]">
-                  {mentor.name}
-                </h3>
-                
-                <p className="text-[#FF6B35] text-sm font-semibold mb-4">
-                  {mentor.title}
-                </p>
-                
-                {/* Description */}
-                <p className="text-[#1A1A1A]/70 text-sm leading-relaxed mb-6">
-                  {mentor.description}
-                </p>
-                
-                {/* Stats */}
-                <div className="space-y-3 mb-6">
-                  {Object.entries(mentor.stats).map(([key, value]) => (
-                    <div
-                      key={key}
-                      className="flex items-center justify-between p-3 bg-[#F8F9FA] rounded-lg border border-[#E8E8E8]"
-                    >
-                      <span className="text-xs font-medium text-[#1A1A1A]/60 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
+                  
+                  <p className="text-[#1A1A1A]/70 leading-relaxed">
+                    {mentor.description}
+                  </p>
+                  
+                  {/* Experience */}
+                  <div className="pt-4 border-t border-[#E8E8E8]">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-[#FF6B35] text-sm">⚡</span>
+                      <span className="text-[#1A1A1A]/60 text-sm font-medium">
+                        {mentor.stats.experience}
                       </span>
-                      <span className="text-sm font-bold text-[#FF6B35]">{value}</span>
                     </div>
-                  ))}
-                </div>
-                
-                {/* Expertise Tags */}
-                <div className="flex flex-wrap gap-2">
-                  {mentor.expertise.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 bg-white border border-[#E8E8E8] text-[#1A1A1A] rounded-full text-xs font-medium"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                    <div className="flex flex-wrap gap-2">
+                      {mentor.expertise.map((skill, i) => (
+                        <span 
+                          key={i} 
+                          className="px-3 py-1 bg-[#F8F9FA] text-[#1A1A1A]/60 text-sm rounded-full border border-[#E8E8E8]"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         {/* Bottom CTA */}
-        <div className="text-center">
-          <p className="text-[#1A1A1A]/70 mb-8">
-            Ready to learn from the best in the industry?
+        <div className="text-center bg-gradient-to-r from-white to-[#F8F9FA] rounded-3xl p-12 border border-[#E8E8E8]">
+          <h3 className="font-bold text-[#0A0A0A] text-2xl mb-4">
+            Get Personal Mentorship
+          </h3>
+          <p className="text-[#1A1A1A]/60 mb-8 max-w-2xl mx-auto text-lg">
+            Work directly with industry experts who will guide your AI marketing journey
           </p>
-          
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#FF6B35] text-white rounded-xl font-bold hover:bg-[#FF6B35]/90 transition-colors duration-300"
+            className="inline-block px-10 py-5 rounded-2xl bg-[#FF6B35] text-white font-bold text-lg hover:bg-[#0A0A0A] transition-colors duration-300"
           >
-            <span>Join Waitlist</span>
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            Meet Your Mentors
           </a>
         </div>
       </div>
