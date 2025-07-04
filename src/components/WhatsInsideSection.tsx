@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const features = [
   { name: '24 Weeks Cohort', icon: '🎓' },
@@ -31,7 +30,7 @@ export default function WhatsInsideSection() {
             Students working with top companies like
           </p>
           <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
-            {companies.map((company, i) => (
+            {companies.map((company) => (
               <div
                 key={company}
                 className="text-2xl font-bold text-[#1A1A1A]/40 tracking-wider hover:text-[#FF6B35] transition-colors duration-300"

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const modules = [
   { 
@@ -96,7 +95,7 @@ export default function CurriculumSection() {
 
         {/* Curriculum Timeline */}
         <div className="relative max-w-4xl mx-auto">
-          {modules.map((module, i) => (
+          {modules.map((module) => (
             <div key={module.week} className="relative mb-12 last:mb-0">
               
               {/* Week Header */}
@@ -157,7 +156,7 @@ export default function CurriculumSection() {
               <h3 className="text-sm font-bold uppercase tracking-widest text-[#FF6B35] mb-4">CAPSTONE PROJECT</h3>
               <h2 className="font-bold mb-6 text-white">Build a Real AI Marketing Product</h2>
               <p className="text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Apply everything you've learned to build a fully functional AI-powered marketing campaign or tool from scratch. This project will be the centerpiece of your portfolio.
+                Apply everything you&apos;ve learned to build a fully functional AI-powered marketing campaign or tool from scratch. This project will be the centerpiece of your portfolio.
               </p>
               <a
                 href="#"
