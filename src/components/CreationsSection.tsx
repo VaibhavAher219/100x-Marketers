@@ -57,17 +57,17 @@ export default function CreationsSection() {
   };
 
   return (
-    <section className="relative w-full py-20 sm:py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="relative w-full py-20 bg-white overflow-hidden">
       <div className="absolute inset-0 opacity-50">
         <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#FF6B35]/10 to-transparent rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#FF6B35]/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}/>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto relative z-10">
         
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-[60px]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -7,7 +7,7 @@ export default function Hero() {
   const y = useTransform(scrollY, [0, 300], [0, 100]);
 
   return (
-    <section className="relative min-h-[calc(100vh-7rem)] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA] py-20">
+    <section className="relative min-h-[calc(100vh-7rem)] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA] pt-[100px] pb-20">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Gradient Orbs */}
@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Main Content */}
       <motion.div
         style={{ y }}
-        className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 text-center"
+        className="relative z-10 container mx-auto text-center"
       >
         {/* Badge */}
         <motion.div

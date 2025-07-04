@@ -60,6 +60,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Enhanced Typography */
@@ -241,6 +242,10 @@ input:focus, textarea:focus {
 
 .section-padding {
   padding: var(--section-padding);
+}
+
+.section-title {
+  margin-bottom: 60px;
 }
 
 /* Responsive Design */

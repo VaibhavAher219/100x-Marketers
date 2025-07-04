@@ -19,17 +19,15 @@ export default function Home() {
       <Hero />
       
       {/* Main Content Sections */}
-      <div className="space-y-0">
-        <WhySection />
-        <CreationsSection />
-        <CurriculumSection />
-        <ToolsSection />
-        <MentorsSection />
-        <WhoIsThisForSection />
-        <WhatsInsideSection />
-        <TracksSection />
-        <CTASection />
-      </div>
+      <WhySection />
+      <CreationsSection />
+      <CurriculumSection />
+      <ToolsSection />
+      <MentorsSection />
+      <WhoIsThisForSection />
+      <WhatsInsideSection />
+      <TracksSection />
+      <CTASection />
     </main>
   );
 }

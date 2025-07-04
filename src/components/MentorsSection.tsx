@@ -65,12 +65,12 @@ export default function MentorsSection() {
   };
 
   return (
-    <section className="relative w-full py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-[#F8F9FA] to-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section className="relative w-full py-20 bg-gradient-to-br from-[#F8F9FA] to-white">
+      <div className="container mx-auto">
         
         {/* Section Header */}
         <motion.div
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          className="text-center mb-[60px]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

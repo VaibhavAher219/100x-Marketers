@@ -36,9 +36,9 @@ export default function TracksSection() {
 
   return (
     <section className="w-full py-20 bg-[#F8F9FA]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="container mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-[60px]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

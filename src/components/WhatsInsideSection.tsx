@@ -24,7 +24,7 @@ const companies = [
 export default function WhatsInsideSection() {
   return (
     <section className="w-full py-20 bg-gradient-to-b from-white to-[#F8F9FA]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="container mx-auto">
         {/* Companies Section */}
         <motion.div
           className="text-center mb-20"
@@ -56,7 +56,7 @@ export default function WhatsInsideSection() {
         {/* Main Content */}
         <div className="bg-white rounded-3xl shadow-2xl border border-[#E8E8E8] p-8 md:p-12 lg:p-16">
           <motion.div
-            className="text-center mb-12"
+            className="text-center mb-[60px]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -83,7 +83,7 @@ export default function WhatsInsideSection() {
             {features.map((feature) => (
               <motion.div
                 key={feature.name}
-                className="group flex items-center gap-4 p-5 rounded-2xl bg-[#F8F9FA] border border-transparent hover:border-[#FF6B35]/50 hover:bg-white transition-all duration-300"
+                className="group flex items-center gap-4 p-6 rounded-2xl bg-[#F8F9FA] border border-transparent hover:border-[#FF6B35]/50 hover:bg-white transition-all duration-300"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 }

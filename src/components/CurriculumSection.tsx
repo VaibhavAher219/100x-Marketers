@@ -71,12 +71,12 @@ const modules = [
 
 export default function CurriculumSection() {
   return (
-    <section className="relative w-full py-20 sm:py-24 lg:py-32 bg-white">
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+    <section className="relative w-full py-20 bg-white">
+      <div className="container mx-auto">
         
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-[60px]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function CurriculumSection() {
           <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-10 bottom-10 w-1 bg-[#E8E8E8] rounded-full"></div>
 
           {modules.map((module, i) => (
-            <div key={module.week} className="relative lg:grid lg:grid-cols-2 lg:gap-16 items-center mb-12">
+            <div key={module.week} className="relative lg:grid lg:grid-cols-2 lg:gap-16 items-start mb-40">
               <div className={`lg:col-start-${i % 2 === 0 ? 1 : 2} lg:row-start-1`}>
                 <motion.div
                   className="bg-white rounded-3xl p-8 shadow-2xl border border-[#E8E8E8] group"
