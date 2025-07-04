@@ -1,357 +1,139 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+
+const reasons = [
+  {
+    icon: '🚀',
+    title: 'Career Acceleration',
+    description: 'Transform from traditional marketer to AI marketing expert in just 4 weeks',
+    stats: '10x faster career growth'
+  },
+  {
+    icon: '💰',
+    title: 'Revenue Impact',
+    description: 'Build campaigns that generate millions in revenue using cutting-edge AI tools',
+    stats: '$2M+ revenue generated'
+  },
+  {
+    icon: '🎯',
+    title: 'Industry Recognition',
+    description: 'Join the elite 1% of marketers who truly understand and leverage AI',
+    stats: '98% placement rate'
+  },
+  {
+    icon: '🔮',
+    title: 'Future-Proof Skills',
+    description: 'Master the tools and strategies that will dominate marketing for the next decade',
+    stats: 'Next-gen expertise'
+  }
+];
 
 export default function WhySection() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        duration: 0.8
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8
-      }
-    }
-  };
-
   return (
-    <section className="relative w-full py-20 bg-gradient-to-br from-[#F8F9FA] to-white">
-      <div className="container mx-auto">
+    <section className="relative py-32 bg-gradient-to-br from-[#0A0A0A] via-[#1A1A2E] to-[#16213E] overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-[60px]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <h2 className="font-bold text-[#0A0A0A] mb-4 leading-tight">
-            Why become a{' '}
-            <span className="text-[#FF6B35] relative">
-              Gen-AI Marketing
-              <motion.div
-                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FF6B35] to-[#FF6B35]/60 rounded-full"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-              />
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 backdrop-blur-sm mb-8">
+            <span className="text-white/90 text-sm font-medium">
+              ⚡ Why become an AI Marketing Wizard?
             </span>
-            <br />
-            <span className="text-[#FF6B35]">Wizard?</span>
-          </h2>
-          <p className="text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
-            Join the elite community of AI-powered marketers who are reshaping the industry
-          </p>
-        </motion.div>
-
-        {/* Main Content Grid - Aligned at top */}
-        <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+          </div>
           
-          {/* Elite Marketing AI Community */}
-          <motion.div 
-            className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden h-full flex flex-col"
-            variants={itemVariants}
-            whileHover={{ y: -8 }}
-          >
-            {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            {/* Profile Pictures Grid - Perfectly Aligned */}
-            <div className="relative mb-8 h-64 flex items-center justify-center">
-              <div className="relative w-64 h-64">
-                
-                {/* Center Large Profile - AI */}
-                <motion.div 
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-gradient-to-br from-[#FF6B35] to-[#FF8A65] border-4 border-white shadow-xl flex items-center justify-center z-10"
-                  whileHover={{ scale: 1.15, zIndex: 20 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <span className="text-white font-bold text-lg">AI</span>
-                </motion.div>
-                
-                {/* Perfectly Positioned Surrounding Profiles - All Same Size */}
-                
-                {/* Top Left - JS */}
-                <motion.div 
-                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 border-4 border-white shadow-lg flex items-center justify-center"
-                  style={{ top: '15%', left: '15%' }}
-                  whileHover={{ scale: 1.15, zIndex: 20 }}
-                  animate={{ 
-                    y: [0, -8, 0],
-                    rotate: [0, 5, 0]
-                  }}
-                  transition={{ 
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">JS</span>
-                </motion.div>
-                
-                {/* Top Right - MK */}
-                <motion.div 
-                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 border-4 border-white shadow-lg flex items-center justify-center"
-                  style={{ top: '15%', right: '15%' }}
-                  whileHover={{ scale: 1.15, zIndex: 20 }}
-                  animate={{ 
-                    y: [0, 8, 0],
-                    rotate: [0, -5, 0]
-                  }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">MK</span>
-                </motion.div>
-                
-                {/* Bottom Left - LP */}
-                <motion.div 
-                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-green-600 border-4 border-white shadow-lg flex items-center justify-center"
-                  style={{ bottom: '15%', left: '15%' }}
-                  whileHover={{ scale: 1.15, zIndex: 20 }}
-                  animate={{ 
-                    y: [0, -8, 0],
-                    rotate: [0, 3, 0]
-                  }}
-                  transition={{ 
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 2
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">LP</span>
-                </motion.div>
-                
-                {/* Bottom Right - RH */}
-                <motion.div 
-                  className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 border-4 border-white shadow-lg flex items-center justify-center"
-                  style={{ bottom: '15%', right: '15%' }}
-                  whileHover={{ scale: 1.15, zIndex: 20 }}
-                  animate={{ 
-                    y: [0, 12, 0],
-                    rotate: [0, -3, 0]
-                  }}
-                  transition={{ 
-                    duration: 4.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5
-                  }}
-                >
-                  <span className="text-white font-bold text-sm">RH</span>
-                </motion.div>
-                
-                {/* Connecting Lines - Perfectly Centered */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-                  <motion.line
-                    x1="32%" y1="32%" x2="50%" y2="50%"
-                    stroke="#FF6B35"
-                    strokeWidth="2"
-                    strokeOpacity="0.4"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
-                  />
-                  <motion.line
-                    x1="68%" y1="32%" x2="50%" y2="50%"
-                    stroke="#FF6B35"
-                    strokeWidth="2"
-                    strokeOpacity="0.4"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut", delay: 0.3 }}
-                  />
-                  <motion.line
-                    x1="32%" y1="68%" x2="50%" y2="50%"
-                    stroke="#FF6B35"
-                    strokeWidth="2"
-                    strokeOpacity="0.4"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut", delay: 0.6 }}
-                  />
-                  <motion.line
-                    x1="68%" y1="68%" x2="50%" y2="50%"
-                    stroke="#FF6B35"
-                    strokeWidth="2"
-                    strokeOpacity="0.4"
-                    initial={{ pathLength: 0 }}
-                    whileInView={{ pathLength: 1 }}
-                    transition={{ duration: 2, ease: "easeInOut", delay: 0.9 }}
-                  />
-                </svg>
-              </div>
-            </div>
-            
-            <div className="relative z-10 flex-1 flex flex-col">
-              <h3 className="font-bold mb-4 text-[#FF6B35]">
-                Elite Marketing AI Community
-              </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed mb-8 flex-1">
-                Join the exclusive network of AI Marketing Wizards who are pioneering the future of marketing. 
-                Get mentorship, collaborate on projects, and build lifelong connections.
-              </p>
-              
-              {/* Stats - Perfectly Aligned */}
-              <div className="grid grid-cols-3 gap-4 bg-[#F8F9FA] rounded-2xl p-6 border border-[#E8E8E8]">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">500+</div>
-                  <div className="text-sm font-medium text-[#1A1A1A]/60">Members</div>
-                </div>
-                <div className="text-center border-l border-r border-[#E8E8E8]">
-                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">24/7</div>
-                  <div className="text-sm font-medium text-[#1A1A1A]/60">Support</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#FF6B35] mb-1">∞</div>
-                  <div className="text-sm font-medium text-[#1A1A1A]/60">Access</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
+            The Future of Marketing
+            <br />
+            <span className="bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+              is AI-Powered
+            </span>
+          </h2>
+          
+          <p className="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto leading-relaxed">
+            While others struggle with outdated tactics, you&apos;ll be building campaigns that generate 
+            millions in revenue using cutting-edge AI tools and strategies.
+          </p>
+        </div>
 
-          {/* Learn from Marketing AI Experts */}
-          <motion.div 
-            className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#E8E8E8] overflow-hidden h-full flex flex-col"
-            variants={itemVariants}
-            whileHover={{ y: -8 }}
-          >
-            {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
-            {/* Expert Profiles - Perfectly Centered */}
-            <div className="relative mb-8 h-64 flex items-center justify-center">
-              <div className="relative flex items-center justify-center gap-6">
+        {/* Reasons Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
+          {reasons.map((reason, index) => (
+            <div 
+              key={index} 
+              className="group animate-fade-in-up"
+              style={{animationDelay: `${index * 0.2}s`}}
+            >
+              <div className="relative bg-white/5 rounded-3xl p-8 lg:p-10 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:border-orange-500/30">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-pink-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                {/* AI Block - Mentor */}
-                <motion.div 
-                  className="relative"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <motion.div 
-                    className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#0A0A0A] to-[#1A1A1A] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
-                    animate={{ 
-                      rotate: [0, 2, 0],
-                    }}
-                    transition={{ 
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  >
-                    <span className="text-white font-bold text-xl">AI</span>
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </motion.div>
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl">{reason.icon}</span>
+                  </div>
                   
-                  {/* Mentor Label - Larger and More Prominent */}
-                  <motion.div
-                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[#0A0A0A] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg"
-                    animate={{ 
-                      y: [0, -4, 0],
-                    }}
-                    transition={{ 
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  >
-                    Mentor
-                  </motion.div>
-                </motion.div>
-                
-                {/* EX Block - Expert */}
-                <motion.div 
-                  className="relative"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <motion.div 
-                    className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#FF6B35] to-[#FF8A65] border-4 border-white shadow-xl flex items-center justify-center relative overflow-hidden"
-                    animate={{ 
-                      rotate: [0, -2, 0],
-                    }}
-                    transition={{ 
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 3
-                    }}
-                  >
-                    <span className="text-white font-bold text-xl">EX</span>
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </motion.div>
-                  
-                  {/* Expert Label - Larger and More Prominent */}
-                  <motion.div
-                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-[#FF6B35] text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg"
-                    animate={{ 
-                      y: [0, -4, 0],
-                    }}
-                    transition={{ 
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1.5
-                    }}
-                  >
-                    Expert
-                  </motion.div>
-                </motion.div>
+                  {/* Content */}
+                  <div className="space-y-4">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white">
+                      {reason.title}
+                    </h3>
+                    
+                    <p className="text-white/70 text-lg leading-relaxed">
+                      {reason.description}
+                    </p>
+                    
+                    {/* Stats */}
+                    <div className="pt-4 border-t border-white/10">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white/50 text-sm font-medium">
+                          Impact
+                        </span>
+                        <span className="text-orange-400 font-bold text-lg">
+                          {reason.stats}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center animate-fade-in-up" style={{animationDelay: '0.8s'}}>
+          <div className="relative bg-gradient-to-r from-orange-500/10 to-pink-500/10 rounded-3xl p-12 border border-orange-500/20 backdrop-blur-sm">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-pink-500/5 rounded-3xl"></div>
             
-            <div className="relative z-10 flex-1 flex flex-col">
-              <h3 className="font-bold mb-4 text-[#FF6B35]">
-                Learn from Marketing AI Experts
+            <div className="relative z-10">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Ready to Join the AI Marketing Revolution?
               </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed mb-8 flex-1">
-                Your mentors are industry pioneers with decades of experience building AI marketing systems 
-                that generated millions in revenue. Learn from the best in the field.
+              
+              <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+                Don&apos;t get left behind while the industry transforms. Secure your spot in the next cohort.
               </p>
               
-              {/* Expertise Areas - Perfectly Spaced */}
-              <div className="grid grid-cols-2 gap-3">
-                {['AI Strategy', 'Automation', 'Analytics', 'Growth'].map((skill, index) => (
-                  <motion.div
-                    key={skill}
-                    className="px-4 py-3 bg-[#F8F9FA] text-[#1A1A1A] rounded-xl text-sm font-semibold border border-[#E8E8E8] text-center hover:border-[#FF6B35] hover:bg-[#FF6B35] hover:text-white transition-all duration-300"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1, duration: 0.3 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="group relative px-10 py-5 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-bold text-lg rounded-2xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105">
+                  <span className="relative z-10">Start Your Transformation</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-pink-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </button>
+                
+                <button className="px-10 py-5 border border-white/20 text-white font-bold text-lg rounded-2xl hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                  View Success Stories
+                </button>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );
