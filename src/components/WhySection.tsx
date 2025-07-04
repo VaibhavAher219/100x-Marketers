@@ -37,7 +37,7 @@ export default function WhySection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A0A0A] mb-4 leading-tight">
+          <h2 className="font-bold text-[#0A0A0A] mb-4 leading-tight">
             Why become a{' '}
             <span className="text-[#FF6B35] relative">
               Gen-AI Marketing
@@ -52,7 +52,7 @@ export default function WhySection() {
             <br />
             <span className="text-[#FF6B35]">Wizard?</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
             Join the elite community of AI-powered marketers who are reshaping the industry
           </p>
         </motion.div>
@@ -208,10 +208,10 @@ export default function WhySection() {
             </div>
             
             <div className="relative z-10 flex-1 flex flex-col">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-[#FF6B35]">
+              <h3 className="font-bold mb-4 text-[#FF6B35]">
                 Elite Marketing AI Community
               </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg mb-8 flex-1">
+              <p className="text-[#1A1A1A]/70 leading-relaxed mb-8 flex-1">
                 Join the exclusive network of AI Marketing Wizards who are pioneering the future of marketing. 
                 Get mentorship, collaborate on projects, and build lifelong connections.
               </p>
@@ -326,10 +326,10 @@ export default function WhySection() {
             </div>
             
             <div className="relative z-10 flex-1 flex flex-col">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-[#FF6B35]">
+              <h3 className="font-bold mb-4 text-[#FF6B35]">
                 Learn from Marketing AI Experts
               </h3>
-              <p className="text-[#1A1A1A]/70 leading-relaxed text-base sm:text-lg mb-8 flex-1">
+              <p className="text-[#1A1A1A]/70 leading-relaxed mb-8 flex-1">
                 Your mentors are industry pioneers with decades of experience building AI marketing systems 
                 that generated millions in revenue. Learn from the best in the field.
               </p>

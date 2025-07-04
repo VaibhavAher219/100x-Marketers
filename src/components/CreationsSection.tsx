@@ -73,10 +73,10 @@ export default function CreationsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#0A0A0A] mb-6 leading-tight">
+          <h2 className="font-bold text-[#0A0A0A] mb-6 leading-tight">
             What will you <span className="text-[#FF6B35]">create?</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-[#1A1A1A]/70 max-w-3xl mx-auto leading-relaxed">
             Build real AI-powered marketing campaigns that drive measurable results and revenue growth.
           </p>
         </motion.div>
@@ -120,10 +120,10 @@ export default function CreationsSection() {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-[#0A0A0A]">
+                <h3 className="font-bold mb-2 text-[#0A0A0A]">
                   {project.name}
                 </h3>
-                <p className="text-[#1A1A1A]/70 text-base mb-4 leading-relaxed">
+                <p className="text-[#1A1A1A]/70 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between text-xs text-[#1A1A1A]/50 font-medium uppercase tracking-wider">
