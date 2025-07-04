@@ -70,7 +70,7 @@ export default function ToolsSection() {
 
         {/* Tools Grid */}
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 mb-20"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 mb-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

@@ -92,12 +92,12 @@ export default function CreationsSection() {
           {projects.map((project) => (
             <motion.div
               key={project.name}
-              className="group relative bg-white rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 border border-[#E8E8E8]"
+              className="group relative bg-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 border border-[#E8E8E8] min-h-[400px]"
               variants={cardVariants}
               whileHover={{ 
                 y: -10, 
                 scale: 1.03,
-                boxShadow: "0 25px 50px -12px rgba(255, 107, 53, 0.25)"
+                boxShadow: "0 20px 25px -5px rgba(255, 107, 53, 0.2)"
               }}
             >
               <div className="p-1">

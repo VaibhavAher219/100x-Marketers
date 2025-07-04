@@ -60,11 +60,11 @@ export default function WhoIsThisForSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="flex flex-col lg:flex-row gap-10">
           {targetAudience.map((audience, i) => (
             <motion.div
               key={i}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-10 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 min-w-[300px]"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"

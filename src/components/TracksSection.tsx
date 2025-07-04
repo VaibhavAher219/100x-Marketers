@@ -56,7 +56,7 @@ export default function TracksSection() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch"
+          className="flex flex-col lg:flex-row gap-10 items-stretch"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -99,7 +99,7 @@ export default function TracksSection() {
 
 const TrackCard = ({ content }: { content: (typeof cardContent)['jobSeekers'] }) => (
   <motion.div
-    className="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
+    className="bg-white rounded-3xl shadow-xl p-10 border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col h-full min-w-[300px]"
     variants={{
       hidden: { opacity: 0, y: 30, scale: 0.98 },
       visible: { opacity: 1, y: 0, scale: 1 }

@@ -106,7 +106,7 @@ export default function CurriculumSection() {
           <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-10 bottom-10 w-1 bg-[#E8E8E8] rounded-full"></div>
 
           {modules.map((module, i) => (
-            <div key={module.week} className="relative lg:grid lg:grid-cols-2 lg:gap-16 items-start mb-40">
+            <div key={module.week} className="relative lg:grid lg:grid-cols-2 lg:gap-16 items-start mb-10">
               <div className={`lg:col-start-${i % 2 === 0 ? 1 : 2} lg:row-start-1`}>
                 <motion.div
                   className="bg-white rounded-3xl p-8 shadow-2xl border border-[#E8E8E8] group"
@@ -142,10 +142,12 @@ export default function CurriculumSection() {
                     </div>
                   </div>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-3 pl-4">
                     {module.lessons.map((lesson, j) => (
                       <div key={j} className="flex items-center gap-3 p-3 bg-[#F8F9FA] rounded-xl border border-[#E8E8E8]">
-                        <span className="text-lg">💡</span>
+                        <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center mr-4">
+                          <span className="text-lg">💡</span>
+                        </div>
                         <span className="text-sm font-medium text-[#1A1A1A]/80">{lesson}</span>
                       </div>
                     ))}
